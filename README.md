@@ -71,19 +71,22 @@ propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/v
 |       |  Martes           | Miércoles                    | Jueves                        | Viernes                               |
 |------ | ------------------| ---------------------------- | ----------------------------- | ------------------------------------- |
 | 8:00  | Kick off hackaton | Daily por squad              | Daily por squad               | Detalles finales                      |
-| 9:00  | Hackeo            | Hackeo                       | Hackeo                        |                                       |
-| 10:00 |                   | Compartir link de aplicación | Inscripción de aplicaciones   | Feria de demostraciones               |
+| 9:00  | Sesión de planificación  | Hackeo                       | Hackeo                        |                                       |
+| 10:00 | Hackeo            | Compartir link de aplicación | Inscripción de aplicaciones   | Feria de demostraciones               |
 | 11:00 |                   | Presentación y Feedback      |                               | Presentación de mejores squads        |
 | 12:00 |                   |                              |                               |                                       |
 |>13:00 |                   |                              |                               | Deliberación del jurado               |
 | 20:00 |                   |                              | Cierre de inscripciones       |                                       |
 
-## Tips para la organización de trabajo entre UX y Front end
+## Tips para la organización de trabajo entre UX y Front end 
 
 * Las UX y FE entienden en conjunto el reto en el que van a trabajar, se organizan y arman sus primeros bocetos.
 * Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo y a crear componentes atómicos que luego les sea fácil personalizar con CSS y utilizar para crear interfaces más complejas. Además, las FE empiezan también a trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
 * Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar los componentes y a ponerlos en conjunto.
 * Las UX hacen QA y testing con los releases que vayan haciendo las FE.
+* Planifiquen, historias de usuario y definition of done son importantísimos.
+* Usen las ceremonias ágiles para saber en que van como equipo, dailys y retrospectivas diarias son esenciales.
+* Iteren, iteren, iteren.
 
 ## ¿Qué es la Feria de demos?
 
