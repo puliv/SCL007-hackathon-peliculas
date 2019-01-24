@@ -78,16 +78,7 @@ fetch("http://www.omdbapi.com/?s="+title+"&page=1&apikey=b72efd99")
         }  
       });
     }
-      
-
-
-
-  
-
-
-
-
-
+    
 
   /*
 const url = new URL('http://www.omdbapi.com/?apikey=b72efd99'), params = {s:title}

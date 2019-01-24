@@ -12,7 +12,7 @@ RESULTADOS DE LA ENCUESTA
  
  ## Definición del usuario
 
- PopCorn Night está enfocado a un público experto, fanático del cine ya sea por afición, pasatiempo o hobby que ve al “cine” como un arte, donde además de disfrutar de la película, puede obtener información de la misma y exponer su crítica, opinando en la comunidad  “cine club” y dándole una puntuación.
+ PopCorn Night está enfocado a un público experto, fanático del cine ya sea por afición, pasatiempo o hobby que ve al “cine” como un arte, donde además de disfrutar de la película, puede obtener información de la misma y exponer su crítica,opinando en la comunidad  “cine club” y dándole una puntuación.
 
 
  ## Historias de usuarios
