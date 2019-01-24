@@ -141,8 +141,9 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63b
 })
 
 
-const perfilPage = document.getElementsByClassName("identificandoImagen");
 
+const perfilPage = document.getElementsByClassName("identificandoImagen");
+  
   function mostrar(data) {
     
     for (let i = 0; i < perfilPage.length; i++) {
