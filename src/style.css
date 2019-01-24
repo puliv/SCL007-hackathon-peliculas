@@ -1,9 +1,22 @@
 body {
     background-color: black;
 }
-.nav-wrapper, #landing_text{
+.nav-wrapper, #landing_text, #auto_text, #movie_type_text, .root_text, #title_movie_txt, .td_text{
     font-family:'Josefin Sans', sans-serif;
     /* font-size: 60px; */
+}
+.root_text, #title_movie_txt{
+    text-align: center;
+}
+#landing_text, #title_movie_txt{
+    /* margin-bottom: -80px; */
+    font-size: 90px;
+}
+#movie_type_text, #auto_text{
+    font-size: 20px;
+}
+.td_text{
+    font-size: 15px;
 }
 a #nav_icon{
     height: 60px;
@@ -18,7 +31,7 @@ a #nav_icon{
 }
 #landing{
     height: 100vh;
-    background-image: url("../img/adult-casual_background.jpg");
+    background-image: url("img/heart_poppcorn.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,7 +40,7 @@ a #nav_icon{
 }
 #p1{
     height: 300px;
-    background-image: url("../img/heart_poppcorn.jpg");
+    background-image: url("img/watch-movies-with-friends.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,4 +55,7 @@ a #nav_icon{
 }
 h5{
     margin-bottom: -60px;
+}
+.carousel-item{
+   opacity: 1 !important;
 }
