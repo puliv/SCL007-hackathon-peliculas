@@ -141,32 +141,124 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63b
 })
 
 
+const perfilPage = document.getElementsByClassName("identificandoImagen");
 
+  function mostrar(data) {
+    
+    for (let i = 0; i < perfilPage.length; i++) {
+      console.log(perfilPage[i])
 
+      perfilPage[i].addEventListener("click", () => {
+        console.log("holi")
+        
+
+        fetch("https://api.themoviedb.org/3/movie/"+characters[i].imdbID+"/videos?api_key=48819a4f88e3d597df63bebab6723d0f")
+        .then(data=>data.json())
+        .then(data=>{
+           let trailer= data.results
+            let video=trailer[0].key
+            console.log (video)        
+ 
+      document.getElementById('worst').style.display = "none"
+      document.getElementById('best').style.display = "none"
+      document.getElementById('root2').style.display = "none"
+      document.getElementById('root3').style.display = "none"
+      document.getElementById('root4').style.display = "block";
+      document.getElementById('root4').innerHTML = "";
+
+        document.getElementById('root4').innerHTML += `<div class="card-panel" style="background-image:url('https://www.desktopbackground.org/p/2013/05/30/584198_fondos-de-pantalla-cine-todos-los-wallpapers-cine_1920x1080_h.jpg'); background-size: cover; background-position: top;" >
+        <h2 class="lime-text text-accent-2">${characters[i].Title}</h2>
+
+        <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">description</i>Información</div>
+          <div class="collapsible-body">
+          
+          <table class="card-panel white lighten-2">
+          <thead>
+            <tr>
+                <th>Resumen</th>
+                <th>Año de Estreno</th>
+                <th>Duración</th>
+            </tr>
+          </thead>
   
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>${characters[i].Year}</td>
+              <td>$0.87</td>
+            </tr>
+            
+          </tbody>
+        </table> 
+        </div>
+        </li>
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">movie_filter</i>Comida Recomendada</div>
+          <div class="collapsible-body">
+          
+          <div class="row">
+          <div class="col s12 m6">
+            <div class="card white darken-1">
+              <div class="card-content white-text">
+                <span class="card-title black-text"> Pulié </span>
+                <p class="black-text"> Muy buena pelicula para ver con chocolates.</p>
+                </div>
+                </div>
+                </div>
+            
+                <div class="row">
+                <div class="col s12 m6">
+                  <div class="card white darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title black-text"> Martha </span>
+                      <p class="black-text"> Buena pelicula para tomar algo con los amigos, Muy recomendada con una cerveza.</p>
+                      </div>
+                      </div>
+                      </div>
+
+
+                      <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card white darken-1">
+                          <div class="card-content white-text">
+                          <span class="card-title black-text">  Dejanos tu comentario </span>
+                            <span class="card-title black-text">
+                            <input placeholder="" id="first_name" type="text" class="validate">
+                            <label for="first_name">Nombre</label> </span>
+                            <p class="black-text">                           
+                            
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      <label for="textarea1">Que comida te gustaría recomendar con esta pelicula</label>
+                                                     
+                          </p>
+                            </div>
+                            </div>
+                            </div>
+        </div> 
+          </div>
 
 
 
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">play_circle_outline</i>Trailer</div>
+          <div class="collapsible-body"><div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer[0].key}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div></div>
+        </li>
+      </ul>     
 
-
-
-  /*
-const url = new URL('http://www.omdbapi.com/?apikey=b72efd99'), params = {s:title}
-Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
-
-
-// make API request using Fetch API
-fetch(url, {apikey:key})
-  .then((resp) => resp.json()) // Transform the data into json
-  .then(function(data) {
-  // Get the results
-  let characters = data;
-  console.log(characters);
-
-   for ( let i=0 ; i<characters.lenght; i++){
-    root.innerHTML+= `<img src="${characters.Search[i].Poster}">`
-  
+`
+    }).then(data => {
+      M.AutoInit();
+    })
+      })
+    }
   }
-  });
-}
-*/
+
+
+  
+ 
