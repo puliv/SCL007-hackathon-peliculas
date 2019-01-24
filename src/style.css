@@ -1,63 +1,37 @@
 body {
-    background: url(../img/Fondo.jpeg);
-    background-position: top;/*arriba a la derecha*/
-    /*background-repeat: no-repeat;que no se repita el fondo*/
-}
-.nav-wrapper {
     background-color: black;
 }
-#image-header {
+a #nav_icon{
+    height: 60px;
+    width: auto;
+    padding: 5px;
+}
+#landing_logo {
     margin: 0 auto;
-    padding: 10px;
     display: block;
-    align-content: center;
     width: 500px;
     height: 150px;
 }
-#nav-logo{
-    width: 60px;
-    height: 50px;
-    margin-top: 5px;
-    margin-left: 10px;
+#landing{
+    height: 100vh;
+    background-image: url("../img/adult-casual_background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
 }
-#first_title, #second_title{
-    margin: 100px 0px 0%;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    color: beige;
-    font-size: 30px;
+#intro{
+    margin: 50px;
 }
-/* #second_title{
-    margin: 0px !important;
-} */
-#select_part{
-    margin-top: 10%;
-}
-.carousel .carousel-item{
-    margin: 0px auto;
-    width: 50%;
-    height: auto;
-}
-#selects{
-    align-content: center;
-    margin-left: 25%;
-}
-#movie_item .row{
-    display: inline-block;
-    height: auto;
-    align-content: center;
-}
-.card {
-    width: 100%;
-    height: auto;
-}
-#img_1, #img_2, #img_3{
-    width: 100px;
-    height: auto;
-}
-#movie_menu .row{
-    /* display: inline-block; */
-    align-content: center;
-    width:100%;
-    height: auto;
+#p1{
+    height: 300px;
+    background-image: url("../img/heart_poppcorn.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
 }
