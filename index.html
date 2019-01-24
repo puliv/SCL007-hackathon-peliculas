@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>PopCorn Night</title>
-    <link rel="icon" href="./img/palomita.png">
+    <link rel="icon" href="/img/palomita.png">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                <nav class="black">
                    <div class="container">
                        <div class="nav-wrapper">
-                           <a href=" " class="brand-logo"><img src="./img/Icono Blanco.png" id="nav_icon"></a>
+                           <a href=" " class="brand-logo"><img src="img/Icono Blanco.png" id="nav_icon"></a>
                            <ul class="right hide-on-med-and-down" id="navList">
                             <li><a href="#landing">Home</a></li>
                             <li><a href="#work">Log In</a></li>
@@ -35,17 +35,17 @@
        
         <!-- Landing Screen -->
     <div class="section" id="landing">
-        <img src="./img/LogoPopCornNight.png" alt="logo_landing" id="landing_logo">
-        <h1 style="color: yellow;" class="center" id="landing_text">
-                The best movies you can choose next to the food that you like the most.</h1>
+        <img src="img/LogoPopCornNight.png" alt="logo_landing" id="landing_logo">
+        <h1 style="color: black;" class="center" id="landing_text">
+                The best movies you can choose next to the food you like the most.</h1>
         </div>   
     </header>
     
     
     <!--Boton comida-->
     <div class="fixed-action-btn vertical">
-            <a class="btn-floating btn-large  blue-grey darken-4">
-                <i class="popCorn"></i>
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">fastfood</i>
             </a>
             <ul><li><a class="btn-floating  blue darken-4" href="www.pedidosya.cl"><i class="fa fa-food"></i></a></li>
             </ul>
@@ -57,14 +57,14 @@
 <div id="intro" class="section black">
       
         <section id="best">
-                <h5 class="white-text text-darken-2 center">Sweet PopCorn <img id="img1" src="./img/palomita.png"> Most Recommended</h5>
+                <h5 class="white-text text-darken-2 center">Sweet PopCorn <img id="img1" src="img/palomita.png"> These are the most recommended movies</h5>
                 <div class="carousel" id="root">
                     <a class="carousel-item"><img class="img materialboxed responsive-img" src="https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"></a>
                 </div>
             </section>
             
             <section id="worst">
-                <h5 class="white-text text-darken-2 center">Rotten PopCorn <img id="img2" src="./img/palomita.png"> Worst Movies Ever</h5>
+                <h5 class="white-text text-darken-2 center">Rotten PopCorn <img id="img2" src="img/palomita.png"> The are the worst movies ever</h5>
                 <div class="carousel" id="root1">
                     <a class="carousel-item"><img class="img materialboxed responsive-img" src="https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"></a>
                 </div>
@@ -83,40 +83,40 @@
         </div>
 </section>
 <section>
-
-        <div class="section" style="background-color: #141414;" id="work">
-                <div class="container">
-                        <div class="row">
-                                <div class="col s12 m6">
-                                  <div class="row">
-                                    <div class="input-field col s12">
-                                      <i class="material-icons prefix">textsms</i>
-                                      <input type="text" id="autocomplete-input" class="autocomplete">
-                                      <label for="autocomplete-input">Elige la Pelicula que quieres recomendar</label>
-                                    </div>
-                                  </div>
-                                </div>
+    
+     <div class="section" style="background-color: #141414;" id="work">
+         <div class="container">
+                <div class="row">
+                        <div class="col s12 m6">
+                            <div class="row">
+                             <div class="input-field col s12">
+                                 <input type="text" id="autocomplete-input" class="autocomplete">
+                                 <label for="autocomplete-input" id="auto_text">Select a movie you'd like tu recommend</label>
+                             </div>
+                             </div>
+                        </div>
                               
                         
-                              <div class="input-field col s12 m6">
-                                    <select id="generos">
-                                      <option value="" disabled selected>Choose your option</option>
-                                      <option value="28">Noche de Acción</option>
-                                      <option value="35">Noche de Comedia </option>
-                                      <option value="18">Noche Drama</option>
-                                      <option value="10749">Noche de Amor</option>
-                                      <option value="27">Noche de Terror</option>
-                                    </select>
-                                    <label>¿Que tipo de noche quieres tener?</label>
-                                  </div>
-                                </div>
+                         <div class="input-field col s12 m6">
+                            <select id="generos">
+                              <option value="" disabled selected></option>
+                              <option value="28">Action Night</option>
+                               <option value="35">Comedy Night </option>
+                                <option value="18">Drama Night</option>
+                                 <option value="10749">Love Night</option>
+                                 <option value="27">Terror Night</option>
+                               </select>
+                            <label id="movie_type_text">¿What kind of night would you like to have toda</label>
+                          </div>
                         </div>
-                    </div>
+                  </div>
+              </div>
     
            
     <div id="root2"></div>
     <div id="root3"></div>
     <div id="root4"></div>
+    <div id="root5"></div>
             </div>
         </div>
     </div>

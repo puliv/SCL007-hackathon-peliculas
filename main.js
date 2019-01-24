@@ -84,6 +84,7 @@ document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
 })
 
 //  Tipo de Comida para cada noche
+let gen="";
 
 document.getElementById("generos").addEventListener("change", (event)=>{
   event.preventDefault();
@@ -99,42 +100,42 @@ document.getElementById("generos").addEventListener("change", (event)=>{
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63bebab6723d0f&with_genres="+genero+"&sort_by=popularity.desc")
   .then(data=>data.json())
   .then(data=>{
-    let gen= data.results
+  gen= data.results
     console.log(gen)
     console.log(genero)
 
     if (genero == 28){
       document.getElementById('root3').innerHTML += `
-      <div class="card-panel teal lighten-2">
-      <h2 class="white-text text-darken-2">Menú para noches de Acción</h2>
+      <div class="card-panel yellow lighten-2 center">
+      <h2 class="root_text" class="white-text text-darken-2">Menu for Action Nights</h2>
     </div>
       ` 
     }
     if (genero == 35){
       document.getElementById('root3').innerHTML += `
-      <div class="card-panel teal lighten-2">
-      <h2 class="white-text text-darken-2">Menú para noches de Comedia</h2>
+      <div class="card-panel yellow lighten-2 center">
+      <h2 class="root_text" class="white-text text-darken-2">Menu for Comedy Nights</h2>
     </div>
       ` 
     }
     if (genero == 18){
       document.getElementById('root3').innerHTML += `
-      <div class="card-panel teal lighten-2">
-      <h2 class="white-text text-darken-2">Menú para noches de Drama</h2>
+      <div class="card-panel yellow lighten-2 center">
+      <h2 class="root_text" class="white-text text-darken-2">Menu for Drama Nights</h2>
     </div>
       ` 
     }
     if (genero == 10749){
       document.getElementById('root3').innerHTML += `
-      <div class="card-panel teal lighten-2">
-      <h2 class="white-text text-darken-2">Menú para noches de Romance</h2>
+      <div class="card-panel yellow lighten-2 center">
+      <h2 class="root_text" class="white-text text-darken-2">Menu for Love Nights</h2>
     </div>
       ` 
     }
     if (genero == 27){
       document.getElementById('root3').innerHTML += `
-      <div class="card-panel teal lighten-2">
-      <h2 class="white-text text-darken-2">Menú para noches de Miedo</h2>
+      <div class="card-panel yellow lighten-2 center">
+      <h2 class="root_text" class="white-text text-darken-2">Menu for Teror Nights</h2>
     </div>
       ` 
     }
@@ -144,7 +145,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
         ` }
     })
     .then(data => {
-      mostrar()
+      mostrar2()
     });
     
   })
@@ -168,10 +169,12 @@ document.getElementById("generos").addEventListener("change", (event)=>{
             let video=trailer[0].key
             console.log (video)        
  
-      document.getElementById('worst').style.display = "none"
-      document.getElementById('best').style.display = "none"
-      document.getElementById('root2').style.display = "none"
-      document.getElementById('root3').style.display = "none"
+      document.getElementById('landing').style.display = "none";
+      document.getElementById('intro').style.display = "none";
+      document.getElementById('p1').style.display = "none";
+      document.getElementById('work').style.display = "none";
+      document.getElementById('root2').style.display = "none";
+      document.getElementById('root3').style.display = "none";
       document.getElementById('root4').style.display = "block";
       document.getElementById('root4').innerHTML = "";
 
@@ -180,15 +183,15 @@ document.getElementById("generos").addEventListener("change", (event)=>{
 
         <ul class="collapsible">
         <li>
-          <div class="collapsible-header"><i class="material-icons">description</i>Información</div>
+          <div class="collapsible-header"><i class="material-icons">description</i>Information</div>
           <div class="collapsible-body">
           
           <table class="card-panel white lighten-2">
           <thead>
             <tr>
-                <th>Resumen</th>
-                <th>Año de Estreno</th>
-                <th>Duración</th>
+                <th>Recap</th>
+                <th>Year of release</th>
+                <th>Run Time</th>
             </tr>
           </thead>
   
@@ -205,7 +208,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
         </li>
 
         <li>
-          <div class="collapsible-header"><i class="material-icons">movie_filter</i>Comida Recomendada</div>
+          <div class="collapsible-header"><i class="material-icons">movie_filter</i>Recommended Food</div>
           <div class="collapsible-body">
           
           <div class="row">
@@ -213,7 +216,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
             <div class="card white darken-1">
               <div class="card-content white-text">
                 <span class="card-title black-text"> Pulié </span>
-                <p class="black-text"> Muy buena pelicula para ver con chocolates.</p>
+                <p class="black-text">"Such a good movie to watch with some chocolate".</p>
                 </div>
                 </div>
                 </div>
@@ -223,7 +226,128 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                   <div class="card white darken-1">
                     <div class="card-content white-text">
                       <span class="card-title black-text"> Martha </span>
-                      <p class="black-text"> Buena pelicula para tomar algo con los amigos, Muy recomendada con una cerveza.</p>
+                      <p class="black-text"> Is a movie you can watch with your friends and something to drink, I recommended it with beer.</p>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card white darken-1">
+                          <div class="card-content white-text">
+                          <span class="card-title black-text">Leave us your comment</span>
+                            <span class="card-title black-text">
+                            <input placeholder="" id="first_name" type="text" class="validate">
+                            <label for="first_name">Name</label> </span>
+                            <p class="black-text">                           
+                            
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      <label for="textarea1">What food you'd like to recommend with this movie?</label>
+                                                        
+                          </p>
+                            </div>
+                            </div>
+                            </div>
+        </div> 
+          </div>
+
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">play_circle_outline</i>Trailer</div>
+          <div class="collapsible-body"><div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer[0].key}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div></div>
+        </li>
+      </ul>     
+
+`
+    }).then(data => {
+      M.AutoInit();
+    })
+      })
+    }
+  }
+
+  function mostrar2(data) {
+    
+    for (let i = 0; i < perfilPage.length; i++) {
+      console.log(perfilPage[i])
+
+      perfilPage[i].addEventListener("click", () => {
+        console.log("holi")
+        
+
+        fetch("https://api.themoviedb.org/3/movie/"+gen[i].id+"/videos?api_key=48819a4f88e3d597df63bebab6723d0f")
+        .then(data=>data.json())
+        .then(data=>{
+           let trailer= data.results
+            let video=trailer[0].key
+            console.log (video)        
+ 
+
+            document.getElementById('landing').style.display = "none";
+            document.getElementById('intro').style.display = "none";
+            document.getElementById('p1').style.display = "none";
+            document.getElementById('work').style.display = "none";
+    
+      document.getElementById('root2').style.display = "none"
+      document.getElementById('root3').style.display = "none"
+      document.getElementById('root4').style.display = "none"
+      document.getElementById('root5').style.display = "block";
+      document.getElementById('root5').innerHTML = "";
+
+        document.getElementById('root5').innerHTML += `<div class="card-panel" class="col s10" style="background-image:url('https://www.desktopbackground.org/p/2013/05/30/584198_fondos-de-pantalla-cine-todos-los-wallpapers-cine_1920x1080_h.jpg'); background-size: cover; background-position: top;" >
+        <h2 id="title_movie_txt" class="lime-text text-accent-2">${gen[i].title}</h2>
+
+        <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">description</i>Information</div>
+          <div class="collapsible-body">
+          
+          <table class="card-panel white lighten-2">
+          <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Recap</th>
+                <th>Year of Release</th>
+                <th>PopScore</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+            <td><img class="identificandoImagen" src=https://image.tmdb.org/t/p/w500/${gen[i].poster_path} style="height:200px"></td>
+            
+              <td class="td_text">${gen[i].overview}</td>
+              <td class="td_text">${gen[i].release_date}</td>
+              <td class="td_text">${gen[i].vote_average}</td>
+            </tr>
+            
+          </tbody>
+        </table> 
+        </div>
+        </li>
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">movie_filter</i>Recommended Food</div>
+          <div class="collapsible-body">
+          
+          <div class="row">
+          <div class="col s12 m6">
+            <div class="card white darken-1">
+              <div class="card-content white-text">
+                <span class="card-title black-text"> Pulié </span>
+                <p class="black-text">"Such a good movie to watch with some chocolate"</p>
+                </div>
+                </div>
+                </div>
+            
+                <div class="row">
+                <div class="col s12 m6">
+                  <div class="card white darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title black-text"> Martha </span>
+                      <p class="black-text"> "Is a movie you can watch with your friends and something to drink, I recommended it with beer."</p>
                       </div>
                       </div>
                       </div>
@@ -233,14 +357,14 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                       <div class="col s12 m6">
                         <div class="card white darken-1">
                           <div class="card-content white-text">
-                          <span class="card-title black-text">  Dejanos tu comentario </span>
+                          <span class="card-title black-text">Leave us your comment</span>
                             <span class="card-title black-text">
                             <input placeholder="" id="first_name" type="text" class="validate">
-                            <label for="first_name">Nombre</label> </span>
+                            <label for="first_name">Name</label> </span>
                             <p class="black-text">                           
                             
                      <textarea id="textarea1" class="materialize-textarea"></textarea>
-                      <label for="textarea1">Que comida te gustaría recomendar con esta pelicula</label>
+                      <label for="textarea1">What food you'd like to recommend with this movie?</label>
                             
                             
                           </p>
