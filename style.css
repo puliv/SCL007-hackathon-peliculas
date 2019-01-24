@@ -1,6 +1,10 @@
 body {
     background-color: black;
 }
+.nav-wrapper, #landing_text{
+    font-family:'Josefin Sans', sans-serif;
+    /* font-size: 60px; */
+}
 a #nav_icon{
     height: 60px;
     width: auto;
@@ -21,9 +25,6 @@ a #nav_icon{
     background-attachment: fixed;
     z-index: -1;
 }
-#intro{
-    margin: 50px;
-}
 #p1{
     height: 300px;
     background-image: url("../img/heart_poppcorn.jpg");
@@ -34,4 +35,11 @@ a #nav_icon{
     z-index: -1;
     font-family:'Josefin Sans', sans-serif;
     color: black;
+}
+#img1, #img2{
+    height: 30px;
+    width: auto;
+}
+h5{
+    margin-bottom: -60px;
 }
