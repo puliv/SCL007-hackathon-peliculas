@@ -6,19 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css" />
-    <title>PopCorn Nights</title>
-    <link rel="icon" href="img/palomita.png">
+    <title>PopCorn Night</title>
+    <link rel="icon" href="../img/palomita.png">
   </head>
 
   <body>
-     <img id="img-bottom" src="img/Fondo.jpeg">
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+      <header>
+          <nav>
+              <div class="nav-wrapper" id="nav-bar">
+                  <a href="#" class="brand-logo"><img id="nav-logo"src="../img/Icono Blanco.png"></a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href="#">Registrate</a></li>
+                    </ul>
+                    <img id="image-header" src="../img/LogoPopCornNight.png" alt="logo">
+                </div>
+            </nav>
+            <div class="container row" id="selects">
+                <div class="input-field col s3" id="select_part">
+                        <select >
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                        </select>
+                </div>
+                <div class="input-field col s3" id="select_part">
+                        <select >
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                        </select>
+                </div>
+                <div class="input-field col s3" id="select_part">
+                        <select >
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                        </select>
+                </div>
+            </div>
+        </header>
+      <section id="carousels">
+          <div class="container row">
+              <div id="sweet">
+                 <h1 id="first_title">Sweet PopCorn: Lo más recomendado</h1>
+                 <div class="carousel">
+                     <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+                     <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+                     <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+                     <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+                     <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+                    </div>
+                 </div>
+                 <div id="rotten">
+                     <h1 id="second_title">Rotten PopCorn: Lo menos recomendado</h1>
+                         <div class="carousel">
+                              <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+                              <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+                              <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+                              <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+                              <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+                         </div>
+                   </div> <!--rotten-->
+                </div>
+      </section>
+      <section id="movie_item"> <!--Aqui va una reseña + imagen de una pelicula una especifico-->
+          <div class="container">
+              <div class="row">
+                  <div id="text">
+                        <div class="col s6">
+                           <p>jkashdkjhas daksjhkjashd kjsdhkjshd askdjhaskjdh</p>
+                          </div>
+                        </div>
+                  <div id="card_2">
+                        <div class="col s6 offset-s6">
+                                <div class="card">
+                                  <div class="card-image">
+                                    <img src="../img/palomita.png" id="img_1">
+                                    <span class="card-title">Card Title</span>
+                                  </div>
+                                  <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                  </div>
+                                  <div class="card-action">
+                                    <a href="#">This is a link</a>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+              </div>
+           </div> <!-- container row-->
+      </section>
+      <section id="movie_menu">
+         <div class="container">
+             <div class="row">
+                    <div id="movie_poster">
+                            <div class="col s5">
+                              <div class="card">
+                                <div class="card-image">
+                                  <img src="../img/palomita.png" id="img_2">
+                                  <span class="card-title">Card Title</span>
+                                </div>
+                                <div class="card-content">
+                                  <p>I am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                  <a href="#">This is a link</a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div id="menu_image">
+                        <!-- <div class="col s5 offset-s5">
+                            <div class="card">
+                               <div class="card-image"> -->
+                                 <img src="../img/palomita.png" id="img_3">
+                                    <!-- <span class="card-title">Card Title</span> -->
+                                <!-- </div>
+                            <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                            I am convenient because I require little markup to use effectively.</p>
+                             </div>
+                            <div class="card-action">
+                                 <a href="#">This is a link</a>
+                            </div>
+                            </div>
+                          </div> -->
+                    </div>
+             </div>
+         </div>
+          
+      </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js"></script>
     <script src="data.js"></script>

@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Carousel.init(elems);
   });
 
-  // Inicializador select
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
+  var instance = M.Carousel.init({
+    fullWidth: true
+  });
+
+  //Initialization for Components Materialize
+document.addEventListener("DOMContentLoaded", function(){
+  window.M.AutoInit();
   });
