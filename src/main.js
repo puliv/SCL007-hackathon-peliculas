@@ -61,15 +61,15 @@ document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
   document.getElementById('root2').innerHTML="";
 
   let title = document.getElementById("autocomplete-input").value
-  fetch("http://www.omdbapi.com/?s=" + title + "&page=1&apikey=b72efd99")
+  fetch("http://www.omdbapi.com/?t="+title+"&page=1&apikey=d16a93e4")
     .then(data => data.json())
     .then(data => {
-      characters = Object.values(data.Search);
+      characters = data;
       console.log(characters)
-      for (let i = 0; i <characters.length; i++) {
-        document.getElementById('root2').innerHTML += `<img class="identificandoImagen" src=${characters[i].Poster} style="widht:200px, height:200px">
+      //for (let i = 0; i <characters.length; i++) {
+        document.getElementById('root2').innerHTML += `<img class="identificandoImagen" src=${characters.Poster} style="widht:200px, height:200px">
    `
-      }if (data.Response === "False"){
+      if (data.Response === "False"){
         return;
     }if (data.Poster === "N/A"){
       return;
@@ -89,7 +89,7 @@ let gen="";
 document.getElementById("generos").addEventListener("change", (event)=>{
   event.preventDefault();
 
-  mostrar()
+  
   document.getElementById('worst').style.display="none"
   document.getElementById('best').style.display="none"
   document.getElementById('root2').style.display="none"
@@ -162,7 +162,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
         console.log("holi")
         
 
-        fetch("https://api.themoviedb.org/3/movie/"+characters[i].imdbID+"/videos?api_key=48819a4f88e3d597df63bebab6723d0f")
+        fetch("https://api.themoviedb.org/3/movie/"+characters.imdbID+"/videos?api_key=48819a4f88e3d597df63bebab6723d0f")
         .then(data=>data.json())
         .then(data=>{
            let trailer= data.results
@@ -179,7 +179,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
       document.getElementById('root4').innerHTML = "";
 
         document.getElementById('root4').innerHTML += `<div class="card-panel" style="background-image:url('https://www.desktopbackground.org/p/2013/05/30/584198_fondos-de-pantalla-cine-todos-los-wallpapers-cine_1920x1080_h.jpg'); background-size: cover; background-position: top;" >
-        <h2 class="lime-text text-accent-2">${characters[i].Title}</h2>
+        <h2 class="lime-text text-accent-2">${characters.Title}</h2>
 
         <ul class="collapsible">
         <li>
@@ -189,17 +189,19 @@ document.getElementById("generos").addEventListener("change", (event)=>{
           <table class="card-panel white lighten-2">
           <thead>
             <tr>
+            <th>Poster</th>
                 <th>Recap</th>
                 <th>Year of release</th>
-                <th>Run Time</th>
+                <th>PopScore</th>
             </tr>
           </thead>
   
           <tbody>
             <tr>
-              <td>Alvin</td>
-              <td>${characters[i].Year}</td>
-              <td>$0.87</td>
+            <td>${characters.Poster}</td>
+              <td>${characters.Plot}</td>
+              <td>${characters.Year}</td>
+              <td>${characters.imdbRating}</td>
             </tr>
             
           </tbody>
@@ -231,6 +233,9 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                       </div>
                       </div>
 
+                      <div id="coments1"></div>
+
+
                       <div class="row">
                       <div class="col s12 m6">
                         <div class="card white darken-1">
@@ -245,6 +250,8 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                       <label for="textarea1">What food you'd like to recommend with this movie?</label>
                                                         
                           </p>
+
+                          <button class="waves-effect waves-light btn" id="bComentario1">Guardar</button>
                             </div>
                             </div>
                             </div>
@@ -260,7 +267,24 @@ document.getElementById("generos").addEventListener("change", (event)=>{
         </li>
       </ul>     
 
-`
+`;document.getElementById("bComentario1").addEventListener("click", (event) => {
+  event.preventDefault()
+ 
+  let name = document.getElementById("first_name").value
+  let recomendación = document.getElementById("textarea1").value
+ 
+  document.getElementById("coments1").innerHTML += `
+ 
+  <div class="row">
+  <div class="col s12 m6">
+    <div class="card white darken-1">
+      <div class="card-content white-text">
+        <span class="card-title black-text"> ${name} </span>
+        <p class="black-text"> ${recomendación}</p>
+        </div>
+        </div>
+        </div>
+  `})
     }).then(data => {
       M.AutoInit();
     })
@@ -353,6 +377,8 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                       </div>
 
 
+                      <div id="coments"></div>
+
                       <div class="row">
                       <div class="col s12 m6">
                         <div class="card white darken-1">
@@ -368,6 +394,8 @@ document.getElementById("generos").addEventListener("change", (event)=>{
                             
                             
                           </p>
+
+                          <button class="waves-effect waves-light btn" id="bComentario">Guardar</button>
                             </div>
                             </div>
                             </div>
@@ -385,7 +413,23 @@ document.getElementById("generos").addEventListener("change", (event)=>{
         </li>
       </ul>     
 
-`
+`;document.getElementById("bComentario").addEventListener("click", (event) => {
+  event.preventDefault()
+  let name = document.getElementById("first_name").value
+  let recomendación = document.getElementById("textarea1").value
+  document.getElementById("coments").innerHTML += `
+  <div class="row">
+  <div class="col s12 m6">
+    <div class="card white darken-1">
+      <div class="card-content white-text">
+        <span class="card-title black-text"> ${name} </span>
+        <p class="black-text"> ${recomendación}</p>
+        </div>
+        </div>
+        </div>
+  `})
+ 
+ 
     }).then(data => {
       M.AutoInit();
     })
