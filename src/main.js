@@ -54,16 +54,16 @@ let characters="";
 // Buscador
 document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
   if(e.keyCode === 13)
-  // document.getElementById('landing').style.display = "none";
-  // document.getElementById('intro').style.display = "none";
-  // document.getElementById('p1').style.display = "none";  //funciona raro
+  document.getElementById('landing').style.display = "none";
+  document.getElementById('intro').style.display = "none";
+  document.getElementById('p1').style.display = "none";  //funciona raro
   document.getElementById('worst').style.display="none"
-  document.getElementById('best').style.display="none"
+  //document.getElementById('best').style.display="none"
   document.getElementById('root2').style.display="block"
   document.getElementById('root2').innerHTML="";
 
   let title = document.getElementById("autocomplete-input").value
-  fetch("http://www.omdbapi.com/?t="+title+"&page=1&apikey=d16a93e4")
+  fetch("https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?t="+title+"&page=1&apikey=d16a93e4")
     .then(data => data.json())
     .then(data => {
       characters = data;
@@ -200,7 +200,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
   
           <tbody>
             <tr>
-            <td>${characters.Poster}</td>
+            <td><img class="identificandoImagen" src=${characters.Poster}></td>
               <td>${characters.Plot}</td>
               <td>${characters.Year}</td>
               <td>${characters.imdbRating}</td>
