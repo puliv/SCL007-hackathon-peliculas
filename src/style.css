@@ -5,7 +5,7 @@ body {
     font-family:'Josefin Sans', sans-serif;
     /* font-size: 60px; */
 }
-.root_text, #title_movie_txt{
+.root_text, #title_movie_txt, #landing_text{
     text-align: center;
 }
 #landing_text, #title_movie_txt{
@@ -14,6 +14,15 @@ body {
 }
 #movie_type_text, #auto_text{
     font-size: 20px;
+    color: #ffea00;
+}
+#root3{
+    align-content: center;
+    margin: 50px 50px;
+    display: block;
+}
+.yellow.lighten-2 {
+    background-color: #ffff00 !important;
 }
 .td_text{
     font-size: 15px;
@@ -31,7 +40,7 @@ a #nav_icon{
 }
 #landing{
     height: 100vh;
-    background-image: url("img/adult-casual_background.jpg");
+    background-image: url("img/fondo_mujer.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

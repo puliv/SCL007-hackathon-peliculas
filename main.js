@@ -54,9 +54,7 @@ let characters="";
 // Buscador
 document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
   if(e.keyCode === 13)
-  // document.getElementById('landing').style.display = "none";
-  // document.getElementById('intro').style.display = "none";
-  // document.getElementById('p1').style.display = "none";  //funciona raro
+  
   document.getElementById('worst').style.display="none"
   document.getElementById('best').style.display="none"
   document.getElementById('root2').style.display="block"
@@ -181,7 +179,7 @@ document.getElementById("generos").addEventListener("change", (event)=>{
       document.getElementById('root4').innerHTML = "";
 
         document.getElementById('root4').innerHTML += `<div class="card-panel" style="background-image:url('https://www.desktopbackground.org/p/2013/05/30/584198_fondos-de-pantalla-cine-todos-los-wallpapers-cine_1920x1080_h.jpg'); background-size: cover; background-position: top;" >
-        <h2 class="lime-text text-accent-2">${characters.Title}</h2>
+        <h2 class="yellow-text text-accent-2">${characters.Title}</h2>
 
         <ul class="collapsible">
         <li>
