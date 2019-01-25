@@ -69,7 +69,7 @@ document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
       characters = data;
       console.log(characters)
       //for (let i = 0; i <characters.length; i++) {
-        document.getElementById('root2').innerHTML += `<img class="identificandoImagen" src=${characters.Poster} style="widht:200px, height:200px">
+        document.getElementById('root2').innerHTML += `<img class="identificandoImagen" src=${characters.Poster} style="widht:200px; height:200px">
    `
       if (data.Response === "False"){
         return;
@@ -109,35 +109,49 @@ document.getElementById("generos").addEventListener("change", (event)=>{
     if (genero == 28){
       document.getElementById('root3').innerHTML += `
       <div class="card-panel yellow lighten-2 center">
-      <h2 class="root_text" class="white-text text-darken-2">Menu for Action Nights</h2>
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Action Nights</h3>
+      <span><img class="menu-imagen" src="img/menu1.png"></span>
+
     </div>
       ` 
     }
     if (genero == 35){
       document.getElementById('root3').innerHTML += `
       <div class="card-panel yellow lighten-2 center">
-      <h2 class="root_text" class="white-text text-darken-2">Menu for Comedy Nights</h2>
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Comedy Nights</h3>
+      <span><img class="menu-imagen" src="img/menu2.png"></span>
     </div>
       ` 
     }
     if (genero == 18){
       document.getElementById('root3').innerHTML += `
       <div class="card-panel yellow lighten-2 center">
-      <h2 class="root_text" class="white-text text-darken-2">Menu for Drama Nights</h2>
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Drama Nights</h3>
+      <span><img class="menu-imagen" src="img/menu3.png"></span>
     </div>
       ` 
     }
     if (genero == 10749){
       document.getElementById('root3').innerHTML += `
       <div class="card-panel yellow lighten-2 center">
-      <h2 class="root_text" class="white-text text-darken-2">Menu for Love Nights</h2>
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Love Nights</h3>
+      <span><img class="menu-imagen" src="img/menu4.png"></span>
     </div>
       ` 
     }
     if (genero == 27){
       document.getElementById('root3').innerHTML += `
       <div class="card-panel yellow lighten-2 center">
-      <h2 class="root_text" class="white-text text-darken-2">Menu for Teror Nights</h2>
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Teror Nights</h3>
+      <span><img class="menu-imagen" src="img/menu5.png"></span>
+    </div>
+      ` 
+    }
+    if (genero == 10751){
+      document.getElementById('root3').innerHTML += `
+      <div class="card-panel yellow lighten-2 center">
+      <h3 class="root_text" class="white-text text-darken-2">Menu for Family Nights</h3>
+      <span><img class="menu-imagen" src="img/menu6.png"></span>
     </div>
       ` 
     }

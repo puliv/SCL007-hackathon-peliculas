@@ -1,11 +1,15 @@
 <p align="center">
 <img src="img/logo film.png">
 </p>
-# PopCorn Night
+
+   #PopCorn Night
+
 Definición del Producto
 PopCorn Night es una aplicación Web que nace al querer satisfacer a un público muy particular, en éste caso personas que tiene un gusto especial por el séptimo arte "cine", que puede serlo por afición o por pasatiempo. Va dirigido a usuarios que gusta del análisis y crítica de los filmes. En este website les permitirá buscar de manera ordenada los films por categoría, ver una pequeña reseña, trailer, actores y guardar sus films favoritos en su repositorio. Igualmente tendrá la opción de pedir comida de manera fácil y rápida. También tendrá la oportunidad de pertenecer a una comunidad "cine club" donde podrá opinar, evaluar, hacer críticas de un film en particular.
+
  ## Investigación
  Durante la fase de investigación, se realizó una encuesta a 25 personas para obtener información, recopilar datos relevantes que querían que mostráramos en el website. Encuesta que concluyó en:
+
 
 RESULTADOS DE LA ENCUESTA
 El 96% dijo que Sí le gusta ver películas .
