@@ -54,7 +54,9 @@ let characters="";
 // Buscador
 document.getElementById("autocomplete-input").addEventListener("keyup", (e) => {
   if(e.keyCode === 13)
-  
+  // document.getElementById('landing').style.display = "none";
+  // document.getElementById('intro').style.display = "none";
+  // document.getElementById('p1').style.display = "none";  //funciona raro
   document.getElementById('worst').style.display="none"
   document.getElementById('best').style.display="none"
   document.getElementById('root2').style.display="block"
